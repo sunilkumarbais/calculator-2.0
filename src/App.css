@@ -1,0 +1,84 @@
+/* Main Calculator Container */
+.App {
+  width: 350PX;                  
+  margin: 50px auto;             
+  padding: 20px;
+  border-radius: 20px;
+  background: #2c3e50;           
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;                     
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #00ff9dad;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+/* Display Screen */
+.App input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: right;
+  border: none;
+  border-radius: 12px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  box-shadow: inset 2px 2px 6px rgba(0,0,0,0.15);
+}
+
+.App input[type="text"]:focus {
+  outline: none;
+}
+
+/* Button Grid */
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(5, 60px); 
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Buttons */
+.btn-container .btn {
+  background-color: #34495e;
+  color: #fff;
+  border: none;
+  padding: 20px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-container .btn:hover {
+  background-color: #3d566e;
+  transform: scale(1.05);
+}
+
+.btn-container .btn:active {
+  background-color: #1abc9c;
+  transform: scale(0.95);
+}
+
+/* Special styling (optional) */
+.btn.zero {
+  grid-column: span 2; /* Make "0" button wider */
+}
+
+.btn.equals {
+  background-color: #e67e22;
+  grid-row: span 2; /* Make "=" button taller */
+}
+
+.btn.equals:hover {
+  background-color: #d35400;
+}
